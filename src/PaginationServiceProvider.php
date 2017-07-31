@@ -21,7 +21,7 @@ class PaginationServiceProvider extends ServiceProvider
   public function register ()
   {
     $this->app->singleton('pagination', function ($app) {
-      return new PaginationManager($app);
+      return new PaginationFactory($app);
     });
   }
 }

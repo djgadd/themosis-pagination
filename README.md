@@ -1,5 +1,5 @@
 # Themosis Pagination
-A package for the Themosis framework that implements some basic utilities for pagination to make it a little easier to work with (rather than being bound by WordPresses markup and classes.)
+A package for the Themosis framework that implements some basic utilities for pagination to make it a little easier to work with (rather than being bound by WordPress' markup and classes.)
 
 ## Install
 Install through composer: -
@@ -9,6 +9,19 @@ Copy the `config/pagination.config.php` to your `theme/resources/config` directo
 
 Register the service provider in your `theme/resources/config/providers.php` file: -
 `KeltieCochrane\Pagination\PaginationServiceProvider::class,`
+
+## Use
+Call the helper function ```kc_pagination()```, which returns a KeltieCochrane\\Pagination\\Pagination object. The object contains the pagination navigation items in an Illuminate\\Support\\Collection object. You can call Collection methods on the Pagination object, they will be mapped to the underlying Collection. The Pagination class also implements Countable, ArrayAccess, and ArrayIterator, so you can interact with items more conveniently.
+
+Each item is an array as follows: -
+
+```
+  [
+    'url' => bool|string, // Either the items URL or false if it doesn't have one.
+    'class' => string, // Classes to be applied to the item.
+    'text' => string, // The text for the item.
+  ]
+```
 
 ## Examples
 ```
@@ -20,15 +33,6 @@ Register the service provider in your `theme/resources/config/providers.php` fil
    * @return \Illuminate\Support\Collection
    */
   kc_pagination($args, $query = null);
-
-  [
-    [
-      'url' => string|false,
-      'class' => string,
-      'text' => string,
-    ],
-    [...]
-  ]
 ```
 
 ## Support
