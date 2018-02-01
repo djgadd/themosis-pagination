@@ -24,7 +24,7 @@
   "require": {
     "php": ">=7.0",
     "composer/installers": "~1.2",
-    "keltiecochrane/themosis-illuminate": "^1.0",
+    "djgadd/themosis-illuminate": "^1.0",
     "sunra/php-simple-html-dom-parser": "^1.5"
   },
   "autoload": {
