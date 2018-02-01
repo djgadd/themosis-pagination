@@ -1,7 +1,7 @@
 {
   "name": "djgadd/themosis-pagination",
   "description": "Simple WordPress pagination service provider.",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "keywords": ["themosis", "wordpress"],
   "authors": [
     {
